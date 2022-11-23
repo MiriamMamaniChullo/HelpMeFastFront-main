@@ -1,0 +1,54 @@
+<br>
+<div class="container">
+
+  <h2>Registrar Enfermero</h2>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="IdEnfermero" [(ngModel)]="enfermero.idEnfermero">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="enfermero.nameEnfermero">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>DNI</mat-label>
+    <input matInput required placeholder="dni" [(ngModel)]="enfermero.dniEnfermero">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Edad</mat-label>
+    <input matInput required placeholder="edad" [(ngModel)]="enfermero.edadEnfermero">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Numero</mat-label>
+    <input matInput required placeholder="numero" [(ngModel)]="enfermero.numEnfermero">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput required placeholder="email" [(ngModel)]="enfermero.emailEnfermero">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>CIP</mat-label>
+    <input matInput required placeholder="cip" [(ngModel)]="enfermero.codEnfermero">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/enfermeros">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+

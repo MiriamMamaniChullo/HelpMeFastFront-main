@@ -1,0 +1,17 @@
+<div class="container">
+    <h1> Cantidad de servicios por enfermero</h1>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="enfermero">
+            <th mat-header-cell *matHeaderCellDef> Enfermero </th>
+            <td mat-cell *matCellDef="let element"> {{element.enfermero}} </td>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="cantidad">
+            <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+            <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    </div>

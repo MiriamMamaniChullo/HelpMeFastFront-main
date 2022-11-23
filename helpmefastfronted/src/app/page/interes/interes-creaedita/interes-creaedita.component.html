@@ -1,0 +1,45 @@
+<div class="container">
+  
+    <h2>Registrar Interes</h2>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Id" [(ngModel)]="interes.idInteres">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Nivel de Interes</mat-label>
+      <input matInput required placeholder="levelInteres" [(ngModel)]="interes.levelInteres">
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Adulto Joven</mat-label>
+        <mat-select [(value)]="idAdultoJovenSeleccionado" required>
+            <mat-option *ngFor="let aj of listaAdultoJovenes" [value]="aj.idAdultoJoven">
+              {{aj.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Anuncio</mat-label>
+        <mat-select [(value)]="idAnuncioSeleccionado" required>
+            <mat-option *ngFor="let an of listaAnuncios" [value]="an.idAnuncio">
+              {{an.servicio.nameServicios}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+  
+    <br>
+  
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/intereses">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
+  

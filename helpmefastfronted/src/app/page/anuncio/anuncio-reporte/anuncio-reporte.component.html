@@ -1,0 +1,35 @@
+<div class="container">
+  
+  <h2> Lista de anuncios del mes de noviembre</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="idAnuncio">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.idAnuncio}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="preServicio">
+      <th mat-header-cell *matHeaderCellDef> Precio </th>
+      <td mat-cell *matCellDef="let element"> {{element.precioServicio}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="fechaPublicacion">
+      <th mat-header-cell *matHeaderCellDef> Fecha de publicación </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaPublicacion}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="servicio">
+      <th mat-header-cell *matHeaderCellDef> Servicio </th>
+      <td mat-cell *matCellDef="let element"> {{element.servicio.nameServicios}} </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

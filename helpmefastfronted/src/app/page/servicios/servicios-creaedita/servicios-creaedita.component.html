@@ -1,0 +1,52 @@
+<div class="container">
+
+  <h2>Registrar Servicio</h2>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="servicios.idServicios">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre de Servicios</mat-label>
+    <input matInput required placeholder="nameServicios" [(ngModel)]="servicios.nameServicios">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Descripción de Servicios</mat-label>
+    <input matInput required placeholder="descServicios" [(ngModel)]="servicios.descServicios">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+      <mat-label>Seleccione Enfermero</mat-label>
+      <mat-select [(value)]="idEnfermeroSeleccionado" required>
+          <mat-option *ngFor="let e of listaEnfermero" [value]="e.idEnfermero">
+            {{e.nameEnfermero}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+      <mat-label>Seleccione Distrito</mat-label>
+      <mat-select [(value)]="idDistritoSeleccionado" required>
+          <mat-option *ngFor="let d of listaDistrito" [value]="d.idDistrito">
+            {{d.nameDistrito}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <br>
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/servicios">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+
+    

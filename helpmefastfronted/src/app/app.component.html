@@ -1,0 +1,92 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+  
+        <a class="navbar-brand" href="#">
+          <img src="../../../assets/images/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+          <img src="../../../assets/images/titulo.jpeg" alt="" width="250" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/inicio">Home</a>
+            </li>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu2">Enfermero</button>
+              <mat-menu #menu2="matMenu">
+              <button mat-menu-item routerLink="/enfermeros/nuevo">Registrar</button>
+              <button mat-menu-item routerLink="/enfermeros">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu3">Paciente</button>
+              <mat-menu #menu3="matMenu">
+              <button mat-menu-item routerLink="/adultoJoven/insertar">Registrar</button>
+              <button mat-menu-item routerLink="/adultoJoven">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu4">Servicios</button>
+              <mat-menu #menu4="matMenu">
+              <button mat-menu-item routerLink="/servicios/nuevo">Registrar</button>
+              <button mat-menu-item routerLink="/servicios">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu5">Anuncio</button>
+              <mat-menu #menu5="matMenu">
+              <button mat-menu-item routerLink="/anuncios/nuevo">Registrar</button>
+              <button mat-menu-item routerLink="/anuncios">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu6">Interés</button>
+              <mat-menu #menu6="matMenu">
+              <button mat-menu-item routerLink="intereses/nuevo">Registrar</button>
+              <button mat-menu-item routerLink="intereses">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu7">Comentario</button>
+              <mat-menu #menu7="matMenu">
+              <button mat-menu-item routerLink="comentarios/nuevo">Registrar</button>
+              <button mat-menu-item routerLink="comentarios">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+              <button mat-button mat-button [matMenuTriggerFor]="menu8">Distrito</button>
+              <mat-menu #menu8="matMenu">
+              <button mat-menu-item routerLink="distrito/nuevo">Registrar</button>
+              <button mat-menu-item routerLink="distrito">Listar</button>
+              </mat-menu>
+            </div>
+            <div>
+            <button mat-button mat-button [matMenuTriggerFor]="menu9">Reportes</button>
+              <mat-menu #menu9="matMenu">
+              <button mat-menu-item routerLink="/anuncios/reporte">Reporte 1 Miriam</button>
+              <button mat-menu-item routerLink="/anuncios/reporte2">Reporte 2 Miriam</button>
+              <button mat-menu-item routerLink="/adultoJoven/buscarAdultoMayor">Reporte 1 Julio</button>
+              <button mat-menu-item routerLink="/intereses/interesAltoPaciente">Reporte 2 Julio</button>
+              <button mat-menu-item routerLink="/enfermeros/reporte">Reporte 1 Patrick</button>
+              <button mat-menu-item routerLink="/enfermeros/reporte2">Reporte 2 Patrick</button>
+              <button mat-menu-item routerLink="/intereses/reporte">Reporte 1 Angello</button>
+              <button mat-menu-item routerLink="/intereses/reporte2">Reporte 2 Angello</button>
+              <button mat-menu-item routerLink="/servicios/reportesFrancis1">Reporte 1 Francis</button>
+              <button mat-menu-item routerLink="/servicios/reporteFrancis2">Reporte 2 Francis</button>
+              </mat-menu>
+            </div>
+            </ul>
+          <form class="d-flex">
+          </form>
+        </div>
+      </div>
+    </nav>
+<router-outlet></router-outlet>
+
+<div class="container">
+    <h1 class="_centro">Bienvenidos a Help Me Fast</h1>
+    <img src="../../../assets/images/enfermeros.jpg" alt="alt=" width="750" height="500" class="d-inline-block align-text-top">
+</div>

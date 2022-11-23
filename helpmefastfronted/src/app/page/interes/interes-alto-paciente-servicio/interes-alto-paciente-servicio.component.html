@@ -1,0 +1,39 @@
+<div class="container">
+
+    <h2> Pacientes con un nivel de interes alto en un servicio y el enfermero a cargo </h2>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="paciente">
+            <th mat-header-cell *matHeaderCellDef> Nombre del Paciente </th>
+            <td mat-cell *matCellDef="let element"> {{element.paciente}} </td>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="nivelinteres">
+            <th mat-header-cell *matHeaderCellDef> Nivel de Interes </th>
+            <td mat-cell *matCellDef="let element"> {{element.nivelinteres}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nombreservicio">
+            <th mat-header-cell *matHeaderCellDef> Nombre del Servicio </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombreservicio}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fechapublicacion">
+            <th mat-header-cell *matHeaderCellDef> Fecha de publicacion del servicio </th>
+            <td mat-cell *matCellDef="let element"> {{element.fechapublicacion}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="enfermero">
+            <th mat-header-cell *matHeaderCellDef> Enfermero a cargo </th>
+            <td mat-cell *matCellDef="let element"> {{element.enfermero}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cantidad">
+            <th mat-header-cell *matHeaderCellDef> N de comentarios del servicio </th>
+            <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    </div>

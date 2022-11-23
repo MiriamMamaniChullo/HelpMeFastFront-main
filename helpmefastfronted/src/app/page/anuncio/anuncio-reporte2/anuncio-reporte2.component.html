@@ -1,0 +1,35 @@
+<div class="container">
+  
+  <h2> Lista de Cantidad de Anuncios por Servicio con precios minimo y maximo</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="servicio">
+      <th mat-header-cell *matHeaderCellDef> Servicio </th>
+      <td mat-cell *matCellDef="let element"> {{element.servicio}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="cantidad_de_anuncio">
+      <th mat-header-cell *matHeaderCellDef> Cantidad de anuncios</th>
+      <td mat-cell *matCellDef="let element"> {{element.cantidad_de_anuncio}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="precio_minimo">
+      <th mat-header-cell *matHeaderCellDef> Precio Minimo</th>
+      <td mat-cell *matCellDef="let element"> {{element.precio_minimo}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="precio_maximo">
+      <th mat-header-cell *matHeaderCellDef> Precio Maximo</th>
+      <td mat-cell *matCellDef="let element"> {{element.precio_maximo}} </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

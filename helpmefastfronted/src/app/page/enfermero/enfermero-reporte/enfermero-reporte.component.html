@@ -1,0 +1,54 @@
+<div class="container">
+  
+    <h2> Lista de Enfermeros mayores a 30 anios </h2>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+         <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="id_enfermero">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.idEnfermero}} </td>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="cod_enfermero">
+          <th mat-header-cell *matHeaderCellDef> CIP </th>
+          <td mat-cell *matCellDef="let element"> {{element.codEnfermero}}</td>
+        </ng-container>
+  
+        <!-- Weight Column -->
+        <ng-container matColumnDef="dni_enfermero">
+          <th mat-header-cell *matHeaderCellDef> DNI </th>
+          <td mat-cell *matCellDef="let element"> {{element.dniEnfermero}} </td>
+        </ng-container>
+  
+          <!-- Weight Column -->
+          <ng-container matColumnDef="edad_enfermero">
+            <th mat-header-cell *matHeaderCellDef> Edad </th>
+            <td mat-cell *matCellDef="let element"> {{element.edadEnfermero}} </td>
+          </ng-container>
+  
+          <!-- Weight Column -->
+          <ng-container matColumnDef="email_enfermero">
+             <th mat-header-cell *matHeaderCellDef> Email </th>
+              <td mat-cell *matCellDef="let element"> {{element.emailEnfermero}} </td>
+          </ng-container>
+  
+  
+           <!-- Weight Column -->
+              <ng-container matColumnDef="name_enfermero">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let element"> {{element.nameEnfermero}} </td>
+              </ng-container>
+  
+  
+          <!-- Weight Column -->
+              <ng-container matColumnDef="num_enfermero">
+                <th mat-header-cell *matHeaderCellDef> Numero </th>
+                <td mat-cell *matCellDef="let element"> {{element.numEnfermero}} </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          </div>

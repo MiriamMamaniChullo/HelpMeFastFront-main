@@ -1,0 +1,42 @@
+<div class="container">
+
+    <h2> Registrar Comentarios</h2>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="id" [(ngModel)]="comentario.idComentarios">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Opinion</mat-label>
+      <input matInput required placeholder="opinion" [(ngModel)]="comentario.opinion">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Calificacion</mat-label>
+      <input type="numCalificacion" matInput required placeholder="numCalificacion" [(ngModel)]="comentario.numCalificacion">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione Servicio</mat-label>
+      <mat-select [(value)]="idServicioSeleccionado" required>
+          <mat-option *ngFor="let s of listaServicios" [value]="s.idServicios">
+              {{s.nameServicios}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+  
+    <br>
+  
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/comentarios">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+    </div>
+  
+  

@@ -1,0 +1,24 @@
+<br>
+<div class="container">
+
+  <h2>Registrar Distrito</h2>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="IdEnfermero" [(ngModel)]="distrito.idDistrito">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Distrito</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="distrito.nameDistrito">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/distrito">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+

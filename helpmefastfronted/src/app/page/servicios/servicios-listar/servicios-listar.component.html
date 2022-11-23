@@ -1,0 +1,63 @@
+<div class="container">
+  
+  <h2> Lista de Servicios </h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.idServicios}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="nameServicios">
+        <th mat-header-cell *matHeaderCellDef> Servicios</th>
+        <td mat-cell *matCellDef="let element"> {{element.nameServicios}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="descServicios">
+        <th mat-header-cell *matHeaderCellDef> Descripcion</th>
+        <td mat-cell *matCellDef="let element"> {{element.descServicios}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="distrito">
+        <th mat-header-cell *matHeaderCellDef> Distrito </th>
+        <td mat-cell *matCellDef="let element"> {{element.distrito.nameDistrito}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="enfermero">
+        <th mat-header-cell *matHeaderCellDef> Enfermero </th>
+        <td mat-cell *matCellDef="let element"> {{element.enfermero.nameEnfermero}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="accion1">
+        <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="accent"
+          [routerLink]="['edicion', element.idServicios]">Actualizar</button>
+        </td>
+  
+      </ng-container>
+      <ng-container matColumnDef="accion2">
+        <th mat-header-cell *matHeaderCellDef> Eliminar</th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="warn" (click)="confirmar(element.idServicios)">Eliminar</button>
+        </td>
+  
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <div class="example-button-container">
+  
+      <button mat-mini-fab color="accent" arial-label= "Example icon button with a plus one icon"
+        routerLink="/servicios/nuevo">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+    </div>
+  
